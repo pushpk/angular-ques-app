@@ -11,6 +11,9 @@ export class QuestionsComponent implements OnInit {
   constructor(private questionService : QuestionService) { }
 
   ngOnInit() {
+     this.questionService.GetQuestions().subscribe(data => {
+      console.log(data);
+  });
   }
 
 }
